@@ -1,13 +1,12 @@
 <?php
 
-class MembersController extends \BaseController {
+class UserControlle extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
-	 */
-	public function index()
+	 */public function index()
 	{
 		$users = User::all();
 		return View::make('users.index',['users'=> $users]);
@@ -20,9 +19,7 @@ class MembersController extends \BaseController {
 	 * @return Response
 	 */
 	public function create()
-
 	{
-
 		return View::make('users.create');
 	}
 
@@ -32,20 +29,16 @@ class MembersController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	
 	public function store()
-
 	{
 		$playload = Input::all();
 		 $validation = Validator::make($playload,User::$rules);
 
 		 if($validation->fails())
-
 		 {
             return Redirect::to('register')
             ->withErrors($validation)->withInput(Input::except('password'));
-		 } 
-
+		 }  
 		 else
 		 {
 		 	$user = new User;
@@ -58,17 +51,15 @@ class MembersController extends \BaseController {
 	}
 
 	public function login()
-
 	{
 		return View::make('users.login');
 		
 	}
-
-	public function signup()
+	public function signin()
 	{
 		// Capture form input
      	$username = Input::get('username');
-     	$password = Input::get('password');s
+     	$password = Input::get('password');
 
      	$rules = 
      	[
