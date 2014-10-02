@@ -1,4 +1,4 @@
-<!--@if (Session::has('errors'))
+<l<!--@if (Session::has('errors'))
              <div class="alert alert-warning alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert">
             <span aria-hidden="true">&times;</span>
@@ -17,3 +17,4 @@
             </div>
             {{Session::get('alert')}}
             @endif-->
+

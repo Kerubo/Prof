@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-sm-8 col-sm-offset-2">
 	<div class="header">
-		<h2>Create your profile</h2>
+		<h2>Create profile</h2>
 	</div>
 	    {{ Form::open(array('route'=>'users.create')) }}
 		<div class="form_group">
