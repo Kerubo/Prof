@@ -2,28 +2,28 @@
 @section('content')
 <div class="col-sm-8 col-sm-offset-2">
 	<div class="header">
-		<h2>DELETE</h2>
+		<h2>EDIT PROFILE </h2>
 	</div>
-	    {{ Form::open(array('route'=>'profiles.destroy')) }}
+	    {{ Form::open(array('route'=>'profiles.edit')) }}
 		<div class="form_group">
 		{{Form::label('Firstnames')}}
-		{{ Form::text('fnames', null ,array('class'=>'form-control')) }}
+		{{ Form::text('firstnames', null ,array('class'=>'form-control')) }}
 		</div>
 		<div class="form_group">
 		{{Form::label('Lastnames')}}
-		{{ Form::text('lnames', null ,array('class'=>'form-control')) }}
+		{{ Form::text('lastnames', null ,array('class'=>'form-control')) }}
 		</div>
 		<div class="form_group">
 		{{Form::label('Phone')}}
 		{{ Form::text('phone', null ,array('class'=>'form-control')) }}
 		</div>
 		<div class="form_group">
-		{{Form::label('photo number')}}
+		{{Form::label('Image')}}
 		{{ Form::file('country', null ,array('class'=>'form-control')) }}
 		</div>
 		<div class="form_group">
-		{{Form::label('Curriculumn Vitae')}}
-		{{ Form::file('curriculumn', null ,array('class'=>'form-control')) }}
+		{{Form::label('C.V')}}
+		{{ Form::file('resume', null ,array('class'=>'form-control')) }}
 		</div>
 		<div class="form_group">
 		{{Form::label('Nickname')}}
