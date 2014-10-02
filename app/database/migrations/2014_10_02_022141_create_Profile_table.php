@@ -13,12 +13,12 @@ class CreateProfileTable extends Migration {
 	public function up()
 	{
 		
-		Schema::create('profiles',function($table)
+		Schema::create('profile',function($table)
 			{
 				$table->increments('id');
 				$table->string('fname');
 				$table->string('lname');
-				$table->integer('phone n');
+				$table->integer('phone number');
 				$table->string('photo number');
 				$table->string('curriculum Vitae');
 				$table->string('nickname');
