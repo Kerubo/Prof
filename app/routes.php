@@ -15,10 +15,10 @@ Route::get('/', function()
 {
 	return View::make('layouts.master');
 });
-Route::get('register', ['as' => 'users.register', 'uses' => 'UsersController@register']);
-Route::post('register', ['as' => 'users.register', 'uses' => 'UsersController@register']);
-Route::get('login', ['as' => 'users.login', 'uses' => 'UsersController@login']);
-Route::post('login', ['as' => 'users.login', 'uses' => 'UsersController@login']);
-Route::post('signin', ['as' => 'users.signin', 'uses' => 'UsersController@signin']);
-Route::resource('users','UsersController');
-Route::resource('profiles','ProfilesController');
+Route::get('register', ['as' => 'user.register', 'users' => 'UserController@register']);
+Route::post('register', ['as' => 'user.register', 'users' => 'UserController@register']);
+Route::get('login', ['as' => 'user.login', 'users' => 'UserController@login']);
+Route::post('login', ['as' => 'user.login', 'users' => 'UserController@login']);
+Route::post('signin', ['as' => 'user.signin', 'users' => 'UserController@signin']);
+Route::resource('user','UserController');
+Route::resource('profile','ProfileController');

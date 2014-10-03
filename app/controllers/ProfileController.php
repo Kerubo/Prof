@@ -7,10 +7,10 @@ class ProfileController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(){
 	
-		$profile = Profile::all();
-		return View::make('profile.index',['Profile'=> $profile]);
+		$profiles = Profile::all();
+		return View::make('profile.index',['profiles'=> $profiles]);
 	}
 
 

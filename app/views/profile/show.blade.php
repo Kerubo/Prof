@@ -3,8 +3,8 @@
 <div class="page-header">
 <div class="pull-right">
 	<div class="btn-group">
-		<a href="{{route('profiles.index')}}" class="btn btn-default">Back</a>
-		<a href="{{route('profiles.edit')}}" class="btn btn-default">Edit profile</a>
+		<a href="{{route('profile.index')}}" class="btn btn-default">Back</a>
+		<a href="{{route('profile.edit')}}" class="btn btn-default">Edit profile</a>
 	</div>
 </div>
 	<h2>show profile</h2>

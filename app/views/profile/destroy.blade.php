@@ -4,7 +4,7 @@
 	<div class="header">
 		<h2>DELETE</h2>
 	</div>
-	    {{ Form::open(array('route'=>'profiles.destroy')) }}
+	    {{ Form::open(array('route'=>'profile.destroy')) }}
 		<div class="form_group">
 		{{Form::label('Firstnames')}}
 		{{ Form::text('fnames', null ,array('class'=>'form-control')) }}
