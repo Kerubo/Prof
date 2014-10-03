@@ -33,10 +33,10 @@ class ProfileController extends \BaseController {
 	public function store()
 	{
 		$data = Input::all();
-		$validaion = Validator::make($data,Profile::$rules);
+		$validation = Validator::make($data,Profile::$rules);
 		if($validation->fails())
 		 {
-            return Redirect::to('profile.create')
+            return Redirect::to('profile.show')
             ->withErrors($validation)->withInput(Input::except('password'));
 		 }  
 		 else
