@@ -10,7 +10,7 @@
 	<h2>Access</h2>
 	</div>
 
-	{{ Form::open(array('route'=>'users.signin')) }}
+	{{ Form::open(array('route'=>'user.signin')) }}
 	<div class="form-group">
 	{{Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'email'])}}
 	</div>

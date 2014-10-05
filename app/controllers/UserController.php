@@ -10,7 +10,7 @@ class UserController extends \BaseController {
 	/public function index()
 	{
 		$users = User::all();
-		return View::make('users.index',['users'=> $users]);
+		return View::make('members.index',['members'=> $users]);
 	}
 
 
@@ -21,7 +21,7 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('users.create');
+		return View::make('members.create');
 	}
 
 
@@ -53,7 +53,7 @@ class UserController extends \BaseController {
 
 	public function login()
 	{
-		return View::make('users.login');
+		return View::make('members.login');
 		
 	}
 	public function signin()
@@ -74,7 +74,7 @@ class UserController extends \BaseController {
      	{
 			if (Auth::attempt(array('username' => $email, 'password' => $password)))
 			{
-				return Redirect::to('users/create');
+				return Redirect::to('members/create');
 			}
 
 			return Redirect::back()->with('message', 'Check email and password');
@@ -85,8 +85,8 @@ class UserController extends \BaseController {
 
     public function register()
     {
-    	return View::make('users.register');
-    	return Redirect::route('users.login');
+    	return View::make('members.register');
+    	return Redirect::route('members.login');
     }
 	/**
 	 * Display the specified resource.

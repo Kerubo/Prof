@@ -4,26 +4,26 @@
 	<div class="header">
 		<h2>Create profile</h2>
 	</div>
-	    {{ Form::open(array('route'=>'users.create')) }}
+	    {{ Form::open(array('route'=>'user.create')) }}
 		<div class="form_group">
 		{{Form::label('Firstnames')}}
 		{{ Form::text('firstnames', null ,array('class'=>'form-control')) }}
 		</div>
 		<div class="form_group">
 		{{Form::label('Lastnames')}}
-		{{ Form::text('lastnames', null ,array('class'=>'form-control')) }}
+		{{ Form::text('lnames', null ,array('class'=>'form-control')) }}
 		</div>
 		<div class="form_group">
-		{{Form::label('Phone')}}
+		{{Form::label('Phone Number')}}
 		{{ Form::text('phone', null ,array('class'=>'form-control')) }}
 		</div>
 		<div class="form_group">
-		{{Form::label('Image')}}
+		{{Form::label('Photo Number')}}
 		{{ Form::file('country', null ,array('class'=>'form-control')) }}
 		</div>
 		<div class="form_group">
-		{{Form::label('C.V')}}
-		{{ Form::file('resume', null ,array('class'=>'form-control')) }}
+		{{Form::label('Curriculum Vitae')}}
+		{{ Form::file('Curriculumn Vitae', null ,array('class'=>'form-control')) }}
 		</div>
 		<div class="form_group">
 		{{Form::label('Nickname')}}

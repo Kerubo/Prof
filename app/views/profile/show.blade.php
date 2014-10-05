@@ -9,7 +9,7 @@
 </div>
 	<h2>show profile</h2>
 </div>
- <!--user detail goes in here-->
+ <!--All details as per user goes here-->
  <p class="lead">Firstname{{$profile->Firstname }}</p>
  <p class="lead">Lastname{{$profile->lastname}}</p>
  <p class="lead">PhoneNumber{{$profile->phone}}</p>

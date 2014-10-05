@@ -12,7 +12,7 @@
 	</div>
 	<h2>Creat Account</h2>
 	</div>
-	{{ Form::open(['route' => 'users.store']) }}
+	{{ Form::open(['route' => 'user.store']) }}
 	<div class="form-group">
 	{{Form::text('username', null, ['class' => 'form-control', 'placeholder' => 'username'])}}
 	</div>
