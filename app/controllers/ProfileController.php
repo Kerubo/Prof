@@ -9,8 +9,8 @@ class ProfileController extends \BaseController {
 	 */
 	public function index(){
 	
-		$profiles = Profile::all();
-		return View::make('profile.index',['profiles'=> $profiles]);
+		$Profile = Profile::all();
+		return View::make('profile.index',['profile'=> $Profile]);
 	}
 
 
@@ -36,7 +36,7 @@ class ProfileController extends \BaseController {
 		$validation = Validator::make($data,Profile::$rules);
 		if($validation->fails())
 		 {
-            return Redirect::to('profile.show')
+            return Redirect::to('profile/show')
             ->withErrors($validation)->withInput(Input::except('password'));
 		 }  
 		 else

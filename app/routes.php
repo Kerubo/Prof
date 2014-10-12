@@ -1,23 +1,16 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
+
 
 Route::get('/', function()
 {
 	return View::make('layouts.master');
 });
-Route::get('register', ['as' => 'user.register', 'members' => 'UserController@register']);
-Route::post('register', ['as' => 'user.register', 'members' => 'UserController@register']);
-Route::get('login', ['as' => 'user.login', 'members' => 'UserController@login']);
-Route::post('signin', ['as' => 'user.signin', 'members' => 'UserController@signin']);
-Route::resource('Members','UserController');
+Route::get('register', ['as' => 'members.register', 'members' => 'UserController@register']);
+Route::post('register', ['as' => 'members.register', 'members' => 'UserController@register']);
+Route::get('login', ['as' => 'members.login', 'members' => 'UserController@login']);
+Route::post('login', ['as' => 'members.login', 'members' => 'UserController@login']);
+
+Route::post('signup', ['as' => 'members.signup', 'members' => 'UserController@signup']);
+Route::resource('members','MembersController');
 Route::resource('profile','ProfileController');

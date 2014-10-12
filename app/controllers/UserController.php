@@ -7,7 +7,7 @@ class UserController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	/public function index()
+	public function index()
 	{
 		$users = User::all();
 		return View::make('members.index',['members'=> $users]);
@@ -22,6 +22,8 @@ class UserController extends \BaseController {
 	public function create()
 	{
 		return View::make('members.create');
+		return Redirect::to('members.login');
+
 	}
 
 
@@ -33,7 +35,7 @@ class UserController extends \BaseController {
 	public function store()
 	{
 		$playload = Input::all();
-		 $validation = Validator::make($playload,User::$rules);
+		 $validation = validation::make($playload,Member::$rules);
 
 		 if($validation->fails())
 		 {
@@ -42,14 +44,15 @@ class UserController extends \BaseController {
 		 }  
 		 else
 		 {
-		 	$user = new User;
-		 	$user->username = Input::get('username');
-		 	$user->password = Hash::make(Input::get('password'));
-		 	$user->save();
+		 	$member = new Member;
+		 	$member->username = Input::get('username');
+		 	$member->password = Hash::make(Input::get('password'));
+		 	$member->save();
 
-		    return Redirect::to('login');
+		    return Redirect::to('members.show');
 		 }
 	}
+
 
 	public function login()
 	{
@@ -95,8 +98,10 @@ class UserController extends \BaseController {
 	 * @return Response
 	 */
 	public function show($id)
+
 	{
 		//
+
 	}
 
 

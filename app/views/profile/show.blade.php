@@ -1,19 +1,23 @@
 @extends('layouts.master')
+
 @section('content')
 <div class="page-header">
-<div class="pull-right">
-	<div class="btn-group">
-		<a href="{{route('profile.index')}}" class="btn btn-default">Back</a>
-		<a href="{{route('profile.edit')}}" class="btn btn-default">Edit profile</a>
-	</div>
+  <div class="pull-right">
+    <div class="btn-group">
+      <!-- Back to list of all users -->
+      <a href="{{ route('profile.index') }}" class="btn btn-default">Back</a>
+      <!-- Link to Edit Profile Page -->
+      <a href="{{ route('profile.edit', array($user->id)) }}" class="btn btn-default">Edit Profile</a>
+    </div>
+  </div>
+  <h2>Show Profile</h2>
 </div>
-	<h2>show profile</h2>
-</div>
- <!--All details as per user goes here-->
- <p class="lead">Firstname{{$profile->Firstname }}</p>
- <p class="lead">Lastname{{$profile->lastname}}</p>
- <p class="lead">PhoneNumber{{$profile->phone}}</p>
- <p class="lead">Photo{{$profile->photo}}</p>
- <p class="lead">Curriculumn V{{$profile->resume}}</p>
- <p class="lead">Nickname{{$profile->nickname}}</p>
+<!-- User Details goes here -->
+<p class="lead">First Name: {{ $profile->fname }}</p>
+<p class="lead">Last Name: {{ $profile->lname }}</p>
+<p class="lead">Phone Number: {{ $profile->phone n }}</p>
+<p class="lead">Photo Number: {{ $profile->Photo number }}</p>
+<p class="lead">Curriculumn Vitae: {{ $profile->curriculumn vitae}}</p>
+
+<p class="lead">Nickname: {{ $profile->nickname }}</p>
 @stop

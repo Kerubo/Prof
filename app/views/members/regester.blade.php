@@ -8,7 +8,7 @@
 	
 	<div class="page-header">
 	<div class="pull-right">
-	<a href="{{route('users.login')}}" class="btn btn-primary">sign in</a>
+	<a href="{{route('members.login')}}" class="btn btn-primary">sign in</a>
 	</div>
 	<h2>Creat Account</h2>
 	</div>

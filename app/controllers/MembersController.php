@@ -10,7 +10,7 @@ class MembersController extends \BaseController {
 	public function index()
 	{
 		$users = User::all();
-		return View::make('users.index',['users'=> $users]);
+		return View::make('members.index',['members'=> $users]);
 	}
 
 
@@ -23,7 +23,7 @@ class MembersController extends \BaseController {
 
 	{
 
-		return View::make('users.create');
+		return View::make('members.create');
 	}
 
 
@@ -60,7 +60,7 @@ class MembersController extends \BaseController {
 	public function login()
 
 	{
-		return View::make('users.login');
+		return View::make('members.login');
 		
 	}
 
@@ -68,8 +68,8 @@ class MembersController extends \BaseController {
 	{
 		// Capture form input
      	$username = Input::get('username');
-     	$password = Input::get('password');s
-
+     	$password = Input::get('password');
+//declarig an  
      	$rules = 
      	[
      		'username' => 'required|exists:users,username',
@@ -82,7 +82,7 @@ class MembersController extends \BaseController {
      	{
 			if (Auth::attempt(array('username' => $email, 'password' => $password)))
 			{
-				return Redirect::to('users/create');
+				return Redirect::to('members/create');
 			}
 
 			return Redirect::back()->with('message', 'Check email and password');
@@ -93,8 +93,8 @@ class MembersController extends \BaseController {
 
     public function register()
     {
-    	return View::make('users.register');
-    	return Redirect::route('users.login');
+    	return View::make('members.register');
+    	return Redirect::route('members.login');
     }
 	/**
 	 * Display the specified resource.
